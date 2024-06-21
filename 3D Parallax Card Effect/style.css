@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --prime_color: #ff0000;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #ff8181b0, #a600004b);
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card {
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff0000, #f03f3f60);
+  transition: 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: #05471100 40px 50px 25px, #02140033 0 25px 25px;
+}
+
+.glass {
+  transform-style: preserve-3d;
+  position: absolute;
+  inset: 8px;
+  background: linear-gradient(#ffffff59, #ffffffd0);
+  border-radius: 55px;
+  border-top-right-radius: 100%;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  transition: 0.5s ease-in-out;
+  transform: translate3d(0, 0, 25px);
+}
+
+.logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-style: preserve-3d;
+}
+
+.logo .circle {
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #ffe9e949;
+  top: 0;
+  right: 0;
+  box-shadow: #64646f33 -10px 10px 20px;
+  transition: 0.5s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+
+.logo .circle1 {
+  width: 150px;
+  transform: translate3d(0, 0, 20px);
+  top: 8px;
+  right: 8px;
+  transition-delay: 0s;
+}
+
+.logo .circle2 {
+  width: 120px;
+  transform: translate3d(0, 0, 40px);
+  top: 10px;
+  right: 10px;
+  transition-delay: 0.4s;
+}
+
+.logo .circle3 {
+  width: 90px;
+  transform: translate3d(0, 0, 60px);
+  top: 17px;
+  right: 17px;
+  transition-delay: 0.8s;
+}
+
+.logo .circle4 {
+  width: 60px;
+  transform: translate3d(0, 0, 80px);
+  top: 23px;
+  right: 23px;
+  transition-delay: 1.2s;
+}
+
+.logo .circle5 {
+  width: 30px;
+  transform: translate3d(0, 0, 100px);
+  top: 30px;
+  right: 30px;
+  transition-delay: 1.6s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--prime_color);
+}
+
+.content {
+  padding: 130px 60px 0 30px;
+}
+
+.content h1 {
+  color: var(--prime_color);
+  font-weight: 900;
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida sans Unicode", "Lucida Granade",
+    "Lucida Sans", Arial, Sans-serif;
+}
+
+.content p {
+  margin-top: 10px;
+  color: #ff0000;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida sans Unicode", "Lucida Granade",
+    "Lucida Sans", Arial, Sans-serif;
+}
+
+.footer {
+  transform-style: preserve-3d;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Trebuchet MS", "Lucida sans Unicode", "Lucida Granade",
+    "Lucida Sans", Arial, Sans-serif;
+}
+
+.footer .link {
+  transition: 0.2s ease-in-out;
+  font-size: 14px;
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.footer .link:hover {
+  transform: translate3d(0, 0, 10px);
+  color: var(--prime_color);
+}
+
+.footer .social {
+  transform-style: preserve-3d;
+  display: flex;
+  gap: 10px;
+}
+
+.footer .social .social-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  color: var(--prime_color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: #05471180 7px 7px 5px;
+  transition: 0.5s;
+}
+
+.footer .social .social-icon:nth-child(1) {
+  transition: 0.2s ease-in-out 0.2s;
+}
+.footer .social .social-icon:nth-child(2) {
+  transition: 0.2s ease-in-out 0.4s;
+}
+.footer .social .social-icon:nth-child(3) {
+  transition: 0.2s ease-in-out 0.6s;
+}
+
+/* Hover Effect */
+
+.container:hover .card {
+  transform: rotate3d(1, 1, 0, 30deg);
+  box-shadow: #0547110d 30px 50px 25px, #05471111 0 25px 30px;
+}
+
+.container:hover .card .footer .social .social-icon {
+  transform: translate3d(0, 0, 50px);
+  box-shadow: #05471133 -5px 20px 10px;
+}
+
+.container:hover .card .logo .circle2 {
+  transform: translate3d(0, 0, 60px);
+}
+.container:hover .card .logo .circle3 {
+  transform: translate3d(0, 0, 80px);
+}
+.container:hover .card .logo .circle4 {
+  transform: translate3d(0, 0, 100px);
+}
+.container:hover .card .logo .circle5 {
+  transform: translate3d(0, 0, 120px);
+}
